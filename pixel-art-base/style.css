@@ -1,13 +1,12 @@
+
 .grid-container {
     display: inline-grid;
-    grid-template-columns: repeat(20, 1fr);
+  
 }
 
 .caja {
-    margin: 3px;
     width: 10px;
     height: 10px;
-    background-color: red;
     border: 1px solid black;
 }
 
