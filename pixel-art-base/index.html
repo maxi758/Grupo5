@@ -9,14 +9,30 @@
 </head>
 
 <body>
-    
-    <label for="filas">Filas</label>
-    <input type="number" id="numero-filas" name="filas">
-    <label for="columnas">Columnas</label>
-    <input type="number" id="numero-columnas" name="columnas">
-    <button id="btnCrearCuadrilla">CrearCuadrilla</button>
+    <div class="contenedores">
+        <div class="contenedor-1">
+            <label for="filas">Filas</label>
+            <input type="number" id="numero-filas" name="filas">
+            <label for="columnas">Columnas</label>
+            <input type="number" id="numero-columnas" name="columnas">
+        </div>
+        <div class="contenedor-2">
+            <label for="fondo">Fondo</label>
+            <input type="color" id="fondo" name="fondo">
+            <label for="color-lapiz">Color</label>
+            <input type="color" id="colorLapiz" name="color-lapiz">
+        </div>
+        <div class="contenedor-3">
+            <label for="bordes">Ver bordes</label>
+            <input type="checkbox" id="bordes" name="bordes" checked>
+            <button id="btnCrearCuadrilla">Reiniciar</button>
+        </div>
+        <div class="contenedor-3">
+            <button id="btnLapiz" class="boton"></button>
+            <button id="btnGoma" class="boton"></button>
+        </div>
+    </div>
     <div id="container" class="grid-container"></div>
-
     <script src="script.js"></script>
 </body>
 
