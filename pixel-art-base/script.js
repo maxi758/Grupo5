@@ -8,11 +8,13 @@ const btnLapiz = document.getElementById('btnLapiz'); // Activa el lapiz
 const btnGoma = document.getElementById('btnGoma'); // Activa la goma
 let modoLapiz = true;
 const inputCheck = document.getElementById('bordes');
+const inputTamanio = document.getElementById('tamanio');
 
 
 btnAdd.addEventListener('click', function() {
     //Vaciar el html
     container.innerHTML = '';
+    inputTamanio.value = 15;
     //Estilo de css que crea el pixelArt
     container.style.gridTemplateColumns = `repeat(${inputColumna.value}, 1fr)`;
     // Agrega color de fondo
@@ -66,5 +68,13 @@ inputCheck.addEventListener('change', function() {
             celda.style.border = "none";
         }
 
+    }
+})
+inputTamanio.addEventListener('change', function () {
+    const celdas = document.getElementsByClassName('caja');
+    for (let index = 0; index < celdas.length; index++) {
+        const celda = celdas[index];
+        celda.style.width = `${inputTamanio.value}px`;
+        celda.style.height = `${inputTamanio.value}px`;
     }
 })
